@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"> 
+    <title>PACE-CONVERTER CS</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Content here -->
+    <div class="row">
+      <div class="col-sm">
+        <div class="naslov">PACE CONVERTER</div> 
+          <div class="main">
+            <div class="dropdown">
+              <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bmin" data-toggle="dropdown">Minutes
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu mojmenu">
+                  <li id="m"><a href="#">1</a></li>
+                  <li id="m"><a href="#">2</a></li>
+                  <li id="m"><a href="#">3</a></li>
+                  <li id="m"><a href="#">4</a></li>
+                  <li id="m"><a href="#">5</a></li>
+                  <li id="m"><a href="#">6</a></li>
+                  <li id="m"><a href="#">7</a></li>
+                  <li id="m"><a href="#">8</a></li>
+                  <li id="m"><a href="#">9</a></li>
+                  <li id="m"><a href="#">10</a></li>
+              </ul>
+          </div>
+        
+          <div class="dropdown fl">
+            <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bsec" data-toggle="dropdown">Seconds
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu mojmenu">
+                <li id="s"><a href="#">0</a></li>
+                <li id="s"><a href="#">5</a></li>
+                <li id="s"><a href="#">10</a></li>
+                <li id="s"><a href="#">15</a></li>
+                <li id="s"><a href="#">20</a></li>
+                <li id="s"><a href="#">25</a></li>
+                <li id="s"><a href="#">30</a></li>
+                <li id="s"><a href="#">35</a></li>
+                <li id="s"><a href="#">40</a></li>
+                <li id="s"><a href="#">45</a></li>
+                <li id="s"><a href="#">50</a></li>
+                <li id="s"><a href="#">55</a></li>
+            </ul>
+        </div> 
+  
+        <span class="badge badge-warning mojbedge" id="kmh">0</span>  <span class="badge badge-light jedinica">km/h</span> 
+        <span class="badge badge-warning mojbedge" id="milh">0</span>  <span class="badge badge-light jedinica">mil/h</span> 
+        <button type="button" class="btn btn-danger mojedugme" onclick="calculate()">CALCULATE</button>
+      </div>
+          
+    
+     </div>
+  </div>
+
+    <script>
+      let bmin;
+      let bsec;
+
+      document.querySelectorAll('#m').forEach( function(el) {    
+          el.addEventListener('click', function() {
+            bmin=document.querySelector('#bmin').innerText = el.textContent;
+          });
+      });
+
+      document.querySelectorAll('#s').forEach( function(el) {    
+          el.addEventListener('click', function() {
+            bsec=document.querySelector('#bsec').innerText = el.textContent;
+          });
+      });
+     
+      function calculate(){
+            var minutes=  Number(bmin); 
+            var seconds= Number(bsec); 
+            var kmhCalculated= 3600/(minutes*60 + seconds);
+                kmhCalculated= kmhCalculated.toFixed(2);
+            var milhCalculated= kmhCalculated*0.62137;
+                milhCalculated=milhCalculated.toFixed(2)
+            var kmh= document.querySelector('#kmh'); 
+            var milh= document.querySelector('#milh'); 
+         
+                kmh.innerHTML =kmhCalculated;
+                milh.innerHTML = milhCalculated;
+    
+             console.log(minutes)
+             console.log(seconds)
+             console.log(kmhCalculated)
+             console.log(bmin)
+             console.log(bsec)
+         }
+
+      </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

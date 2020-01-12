@@ -1,0 +1,84 @@
+  /// npm install node-sass --save-dev
+    //  "scripts": {
+  //    "compile:sass":"node-sass ./src/sass/main.scss  ./src/css/connect_4.css -w",  
+
+
+ 
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+   
+    font-family: 'Tahoma', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: white;
+
+}
+/* 
+////////////////PRE SET/////////////////////////// */
+
+@import './variables';
+
+.naslov{
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: grey;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.mojmenu{
+  li{
+    text-align: center;
+  }
+  a{
+    font-size: 2rem;
+  }
+
+}
+
+.mojedugme{
+ width: 100px;
+ height: 50px;
+ margin: 2px;
+ font-size: 2rem;
+}
+
+.mojbedge{
+ margin-left: 10px;
+ font-size: 3rem;
+ width: 130px;
+ height: 50px;
+
+}
+
+.jedinica{
+  margin-right:10px;
+  margin-left: 2px;
+  font-size: 2rem;
+}
+
+

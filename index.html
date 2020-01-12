@@ -9,53 +9,56 @@
     <title>PACE-CONVERTER CS</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <!-- Content here -->
-    <div class="row">
-      <div class="col-sm">
-        <div class="naslov">PACE CONVERTER</div> 
-          <div class="main">
-            <div class="dropdown">
-              <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bmin" data-toggle="dropdown">Minutes
-              <span class="caret"></span></button>
-              <ul class="dropdown-menu mojmenu">
-                  <li id="m"><a href="#">1</a></li>
-                  <li id="m"><a href="#">2</a></li>
-                  <li id="m"><a href="#">3</a></li>
-                  <li id="m"><a href="#">4</a></li>
-                  <li id="m"><a href="#">5</a></li>
-                  <li id="m"><a href="#">6</a></li>
-                  <li id="m"><a href="#">7</a></li>
-                  <li id="m"><a href="#">8</a></li>
-                  <li id="m"><a href="#">9</a></li>
-                  <li id="m"><a href="#">10</a></li>
-              </ul>
-          </div>
-        
-          <div class="dropdown fl">
-            <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bsec" data-toggle="dropdown">Seconds
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu mojmenu">
-                <li id="s"><a href="#">0</a></li>
-                <li id="s"><a href="#">5</a></li>
-                <li id="s"><a href="#">10</a></li>
-                <li id="s"><a href="#">15</a></li>
-                <li id="s"><a href="#">20</a></li>
-                <li id="s"><a href="#">25</a></li>
-                <li id="s"><a href="#">30</a></li>
-                <li id="s"><a href="#">35</a></li>
-                <li id="s"><a href="#">40</a></li>
-                <li id="s"><a href="#">45</a></li>
-                <li id="s"><a href="#">50</a></li>
-                <li id="s"><a href="#">55</a></li>
-            </ul>
-        </div> 
-  
-        <span class="badge badge-warning mojbedge" id="kmh">0</span>  <span class="badge badge-light jedinica">km/h</span> 
-        <span class="badge badge-warning mojbedge" id="milh">0</span>  <span class="badge badge-light jedinica">mil/h</span> 
-        <button type="button" class="btn btn-danger mojedugme" onclick="calculate()">CALCULATE</button>
-      </div>
-          
+     <div class="naslov">PACE CONVERTER</div> 
+         <div class="row main">
+             <div class="col-md d-flex justify-content-center">
+                  <div class="dropdown">
+                    <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bmin" data-toggle="dropdown">Minutes
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu mojmenu">
+                        <li id="m"><a href="#">1</a></li>
+                        <li id="m"><a href="#">2</a></li>
+                        <li id="m"><a href="#">3</a></li>
+                        <li id="m"><a href="#">4</a></li>
+                        <li id="m"><a href="#">5</a></li>
+                        <li id="m"><a href="#">6</a></li>
+                        <li id="m"><a href="#">7</a></li>
+                        <li id="m"><a href="#">8</a></li>
+                        <li id="m"><a href="#">9</a></li>
+                        <li id="m"><a href="#">10</a></li>
+                    </ul>
+                  </div>
+      
+                  <div class="dropdown">
+                    <button class="btn btn-lg btn-primary dropdown-toggle mojedugme" type="button" id="bsec" data-toggle="dropdown">Seconds
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu mojmenu">
+                        <li id="s"><a href="#">0</a></li>
+                        <li id="s"><a href="#">5</a></li>
+                        <li id="s"><a href="#">10</a></li>
+                        <li id="s"><a href="#">15</a></li>
+                        <li id="s"><a href="#">20</a></li>
+                        <li id="s"><a href="#">25</a></li>
+                        <li id="s"><a href="#">30</a></li>
+                        <li id="s"><a href="#">35</a></li>
+                        <li id="s"><a href="#">40</a></li>
+                        <li id="s"><a href="#">45</a></li>
+                        <li id="s"><a href="#">50</a></li>
+                        <li id="s"><a href="#">55</a></li>
+                    </ul>
+                  </div>
+                </div>
+        <div class="col-md d-flex justify-content-center align-items-end">
+          <span class="badge badge-warning mojbedge" id="kmh">0</span>  <span class="badge badge-light jedinica">km/h</span> 
+          <span class="badge badge-warning mojbedge" id="milh">0</span>  <span class="badge badge-light jedinica">mil/h</span> 
+        </div>
+        <div class="col-md d-flex justify-content-center">
+          <button type="button" class="btn btn-danger mojedugme" onclick="calculate()">CALCULATE</button>
+        </div>
+      
+       
     
      </div>
   </div>

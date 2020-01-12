@@ -33,18 +33,14 @@ body {
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background: #c5c3c3;
+  border-radius: 10px;
+  padding: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background: grey;
-  border-radius: 10px;
-  padding: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mojmenu li {
@@ -52,11 +48,11 @@ body {
 }
 
 .mojmenu a {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .mojedugme {
-  width: 100px;
+  width: 150px;
   height: 50px;
   margin: 2px;
   font-size: 2rem;
@@ -73,5 +69,6 @@ body {
   margin-right: 10px;
   margin-left: 2px;
   font-size: 2rem;
+  height: 30px;
 }
 /*# sourceMappingURL=main.css.map */

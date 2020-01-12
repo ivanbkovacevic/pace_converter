@@ -44,7 +44,7 @@ body {
 .main{
   background: rgb(197, 195, 195);
   border-radius: 10px;
-  padding: 15px;
+  padding: 35px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -64,7 +64,11 @@ body {
  height: 50px;
  margin: 2px;
  font-size: 2rem;
- 
+
+ &::after{
+   margin-left: 50%;
+ }
+
 }
 
 .mojbedge{
@@ -72,8 +76,6 @@ body {
  font-size: 3rem;
  width: 130px;
  height: 50px;
-
-
 }
 
 .jedinica{
@@ -81,8 +83,28 @@ body {
   margin-left: 2px;
   font-size: 2rem;
   height: 30px;
-
 }
+
+.minutes::before{
+  content: "Minutes";
+  display: inline;
+  position: absolute;
+  color:black;
+  top: -43%;
+  left: 30%;
+}
+
+.seconds::before{
+  content: "Seconds";
+  display: inline-block;
+  position: absolute;
+  color:black;
+  font-size: 2rem;
+  top: -43%;
+  left: 30%;
+}
+
+
 
 
 

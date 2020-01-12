@@ -35,7 +35,7 @@ body {
 .main {
   background: #c5c3c3;
   border-radius: 10px;
-  padding: 15px;
+  padding: 35px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -58,6 +58,10 @@ body {
   font-size: 2rem;
 }
 
+.mojedugme::after {
+  margin-left: 50%;
+}
+
 .mojbedge {
   margin-left: 10px;
   font-size: 3rem;
@@ -70,5 +74,24 @@ body {
   margin-left: 2px;
   font-size: 2rem;
   height: 30px;
+}
+
+.minutes::before {
+  content: "Minutes";
+  display: inline;
+  position: absolute;
+  color: black;
+  top: -43%;
+  left: 30%;
+}
+
+.seconds::before {
+  content: "Seconds";
+  display: inline-block;
+  position: absolute;
+  color: black;
+  font-size: 2rem;
+  top: -43%;
+  left: 30%;
 }
 /*# sourceMappingURL=main.css.map */

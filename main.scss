@@ -22,7 +22,7 @@ html {
 
 body {
    
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     background-color: white;
@@ -34,11 +34,26 @@ body {
 @import './variables';
 
 .naslov{
+  position: relative;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
+  color: white;
   text-align: center;
-  margin-bottom: 50px;
+  padding-top: 80px;
+  // padding-right: 20px;
+  height: 220px;
+  background-image: url('./tredmil_dark_r.jpg') ;
+  background-color: black; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+ 
+  p{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+  }
 }
+
 
 
 .main{
@@ -52,7 +67,8 @@ body {
    flex-grow: 1;
     width: 360px;
    // border:1px solid red;
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
+    
   }
 
   .jedinice{
@@ -142,7 +158,15 @@ body {
   top: -43%;
   left: 24%;
 }
+.logo{
 
+  background-image: url('./cs_logo_bb_100ppi.png') ;
+  background-color: black; /* Used if the image is unavailable */
+  height: 160px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 300px; /* Resize the background image to cover the entire container */
+}
 
 
 

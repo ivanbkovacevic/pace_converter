@@ -61,11 +61,15 @@ body {
 }
 
 .main .dropovi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 360px;
-  padding: 10px 10px 10px 15px;
 }
 
 .main .jedinice {
@@ -86,9 +90,10 @@ body {
 .mojedugme {
   width: 126px;
   height: 50px;
-  margin: 2px 5px 3px 0;
+  margin: 3px;
   font-size: 2.5rem;
   font-weight: bold;
+  background-color: #2196f3;
 }
 
 .mojedugme::after {
@@ -104,7 +109,10 @@ body {
   text-align: center;
   padding-top: 5px;
   margin-bottom: 3px;
-  border-radius: 5% 5%;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
   background-color: #2a2a2a;
 }
 
@@ -112,24 +120,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 5px;
 }
 
 #minkm {
-  margin-left: -9px;
-}
-
-#kmhj {
-  margin-right: 10px;
-}
-
-#milhj {
-  margin-right: 10px;
+  display: block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 200px;
 }
 
 .jedinica {
+  padding: 0;
   font-size: 2rem;
   height: 30px;
+  background-color: #f1f1f1;
 }
 
 .minutes::before {
@@ -140,7 +149,7 @@ body {
   font-weight: bold;
   font-size: 2rem;
   top: -43%;
-  left: 24%;
+  left: 21%;
 }
 
 .seconds::before {
@@ -151,7 +160,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   top: -43%;
-  left: 24%;
+  left: 18%;
 }
 
 .logo {

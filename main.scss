@@ -1,9 +1,4 @@
-  /// npm install node-sass --save-dev
-    //  "scripts": {
-  //    "compile:sass":"node-sass ./src/sass/main.scss  ./src/css/connect_4.css -w",  
 
-
- 
   * {
     margin: 0;
     padding: 0;
@@ -40,7 +35,6 @@ body {
   color: white;
   text-align: center;
   padding-top: 80px;
-  // padding-right: 20px;
   height: 220px;
   background-image: url('./tredmil_dark_r.jpg') ;
   background-color: black; /* Used if the image is unavailable */
@@ -64,17 +58,16 @@ body {
   flex-wrap: wrap;
 
   .dropovi{
+    display: flex;
+    flex-wrap: wrap;
    flex-grow: 1;
     width: 360px;
-   // border:1px solid red;
-    padding: 10px 10px 10px 15px;
     
   }
 
   .jedinice{
     flex-grow: 1;
     width: 360px;
-   // border:1px solid red;
   }
 }
 
@@ -91,12 +84,12 @@ body {
 .mojedugme{
  width: 126px;
  height: 50px;
- margin: 2px 5px 3px 0;
+ margin:3px;
  font-size: 2.5rem;
  font-weight: bold;
+ background-color: $color-blue;
 
  &::after{
-   //margin-left: 50%;
    display: none;
  }
 
@@ -104,7 +97,6 @@ body {
 
 
 .mojbedge{
-
  color:white;
  font-size: 2.5rem;
   width: 257px;
@@ -113,28 +105,31 @@ body {
  text-align: center;
  padding-top: 5px;
  margin-bottom: 3px;
- border-radius: 5% 5%;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
  background-color: $color-black;
 }
 
 #bedge-cont{
   display:flex;
+  flex-direction: column;
   padding: 5px;
 }
 
 #minkm{
-  margin-left: -9px;
+  display: block;
+  align-self: flex-end;
+  width: 200px;
 }
 
-#kmhj{
-  margin-right: 10px;
-}
-#milhj{
-  margin-right: 10px;
-}
+
 .jedinica{
+  padding: 0;
   font-size: 2rem;
   height: 30px;
+  background-color: $color-gray;
 }
 
 .minutes::before{
@@ -145,7 +140,7 @@ body {
   font-weight: bold;
   font-size: 2rem;
   top: -43%;
-  left: 24%;
+  left: 21%;
 }
 
 .seconds::before{
@@ -156,8 +151,9 @@ body {
   font-size: 2rem;
   font-weight: bold;
   top: -43%;
-  left: 24%;
+  left: 18%;
 }
+
 .logo{
 
   background-image: url('./cs_logo_bb_100ppi.png') ;

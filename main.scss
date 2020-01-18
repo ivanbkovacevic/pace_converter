@@ -28,24 +28,43 @@ body {
 
 @import './variables';
 
+.pace-converter{
+ border: 3px solid red;
+  
 .naslov{
-  position: relative;
-  font-weight: bold;
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-  padding-top: 80px;
-  height: 220px;
-  background-image: url('./tredmil_dark_r.jpg') ;
-  background-color: black; /* Used if the image is unavailable */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
- 
-  p{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.479);
+  &--container{
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    height: 220px;
   }
+
+  &--slika{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0%;
+    bottom:0;
+    background-image: url('./tredmil_dark_r.jpg') ;
+    background-color: black; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    filter: grayscale(100%);
+    filter: brightness(40%);
+    z-index: 1;
+  }
+
+&--text{
+  position: absolute;
+  left: 0;
+  top: 33%;
+  right: 0;
+  z-index: 9999;
+  color:white;
+}
 }
 
 
@@ -60,7 +79,7 @@ body {
   .dropovi{
     display: flex;
     flex-wrap: wrap;
-   flex-grow: 1;
+    flex-grow: 1;
     width: 360px;
     
   }
@@ -163,6 +182,9 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: 300px; /* Resize the background image to cover the entire container */
 }
+
+}
+
 
 
 

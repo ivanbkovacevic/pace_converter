@@ -29,7 +29,7 @@ body {
 @import './variables';
 
 .pace-converter{
- border: 3px solid red;
+ border: 3px solid blue;
   
 .naslov{
   &--container{
@@ -69,7 +69,7 @@ body {
 
 
 
-.main{
+.wraper{
   background: $color-gray;
   border-radius: 10px;
   padding: 35px;

@@ -9,7 +9,9 @@
     <title>Pace to speed converter</title>
 </head>
 <body>
-      <section class="container-fluid pace-converter p-0"> <!-- Start of Section pace-converter  -->
+
+<section class="pace-converter">
+  <div class="container-fluid  p-0"> <!-- Start of container  -->
                 <div class="row no-gutters"> 
                   <div class="col-sm p-0">
                     <div class="naslov--container">
@@ -21,7 +23,7 @@
                     </div>
                   </div><!--   column -->
                 </div><!-- row --> 
-                <div class="row no-gutters main">
+                <div class="row no-gutters wraper">
                     <div class="col-sm d-flex justify-content-center align-items-center flex-column">
                       <div class="dropovi  d-flex justify-content-center align-items-center">
                         <div class="dropdown">
@@ -80,53 +82,14 @@
                         </div>
                       </div><!--   column -->
                     </div><!-- row -->
-              </section><!-- End of Section pace-converter  -->
-
-    <script>
-      let bmin=0;
-      let bsec=0;
-
-      document.querySelectorAll('#m').forEach( function(el) {    
-          el.addEventListener('click', function() {
-            bmin=document.querySelector('#bmin').innerText = el.textContent;
-            calculate()
-          });
-      });
-
-      document.querySelectorAll('#s').forEach( function(el) {    
-          el.addEventListener('click', function() {
-            bsec=document.querySelector('#bsec').innerText = el.textContent;
-            calculate()
-          });
-      });
-     
-      if(bmin!==0 ){
-
-      }
-
-      function calculate(){
-            var minutes=  Number(bmin); 
-            var seconds= Number(bsec); 
-            var kmhCalculated= 3600/(minutes*60 + seconds);
-                kmhCalculated= kmhCalculated.toFixed(2);
-            var milhCalculated= kmhCalculated*0.62137;
-                milhCalculated=milhCalculated.toFixed(2)
-            var kmh= document.querySelector('#kmh'); 
-            var milh= document.querySelector('#milh'); 
-         
-                kmh.innerHTML =kmhCalculated;
-                milh.innerHTML = milhCalculated;
+              </div><!-- End of container  -->
+</section>
     
-             console.log(minutes)
-             console.log(seconds)
-             console.log(kmhCalculated)
-             console.log(bmin)
-             console.log(bsec)
-         }
 
-      </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="pace-converter.js"></script>
 </body>
 </html>

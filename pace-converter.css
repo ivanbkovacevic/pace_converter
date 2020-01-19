@@ -27,9 +27,7 @@ body {
 
 /* 
 ////////////////PRE SET/////////////////////////// */
-.pace-converter {
-  border: 3px solid blue;
-}
+
 
 .pace-converter .naslov--container {
   font-weight: bold;
@@ -186,7 +184,7 @@ body {
 }
 
 .pace-converter .logo {
-  background-image: url("./cs_logo_bb_100ppi.png");
+  background-image: url("./CS-logo-converter.png");
   background-color: black;
   /* Used if the image is unavailable */
   height: 160px;

@@ -185,14 +185,14 @@ body {
 
 .pace-converter .logo {
   background-image: url("./CS_logo_za_converter.jpg");
-  background-color: black;
+  background-color: #020808;
   /* Used if the image is unavailable */
   height: 160px;
   /* You must set a specified height */
-  background-position: center;
+  background-position: 290px -58px;
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: 300px;
+  background-size: 500px;
   /* Resize the background image to cover the entire container */
 }
